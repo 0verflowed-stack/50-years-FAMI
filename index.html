@@ -12,33 +12,56 @@
     rel="stylesheet"
   >
   <script src="
-https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
-"></script>
-<link href="
-https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
-" rel="stylesheet">
+  https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+  "></script>
+  <link href="
+  https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+  " rel="stylesheet">
 </head>
 <body>
   <section class="hero">
     <img class="faculty-logo" src="./assets/logo-faculty-ami.png" alt="Logo" />
-    <div class="hero-background"></div>
+    <div class="hero-background">
+    </div>
     <div class="heroContentWrapper">
       <div class="hero-content">
         <h1 class="first-slide-title">50 РОКІВ</h1>
         <h2 class="first-slide-text1">що творять майбутнє</h2>
-        <p>
-          Запрошуємо на святкування 50-річчя Дня факультету прикладної математики та інформатики
+        <section id="image-carousel-main" class="splide" aria-label="Beautiful Images">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./assets/0.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/2.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/3.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/1.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/4.jpg" alt="">
+              </li>
+            </ul>
+          </div>
+        </section>
+        <p class="invitationTextShort">
+          ЗАПРОШЕННЯ НА СВЯТКУВАННЯ 50-РІЧЧЯ ФАКУЛЬТЕТУ ПРИКЛАДНОЇ МАТЕМАТИКИ ТА ІНФОРМАТИКИ
         </p>
       </div>
       <div class="imagesContainer">
         <div class="imagesWrapper">
-          <img class="softserve" src="./assets/softserve.png" width="300" />
-          <img src="./assets/intellias_logo.webp" width="300" />
+          <img class="whiteImage" src="./assets/softserve.png" width="300" />
+          <img class="whiteImage" src="./assets/intellias_logo.webp" width="300" />
           <img src="./assets/n-ix_logo-3.png" width="300" />
+          <img class="whiteImage" src="./assets/eleks.png" width="300" />
+          <img lass="whiteImage" src="./assets/leobit.png" width="300" />
         </div>
       </div>
     </div>
-    <div id="three-container"></div>
   </section>
   <section class="info-section">
     <!-- <div class="worklet-canvas"></div> -->
@@ -60,13 +83,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </svg>
     <div class="info-content">
       <p>
-          <h2 class="info-content-title"><b>ШАНОВНІ	СТУДЕНТИ,	ВИКЛАДАЧІ,</b>
+          <h2 class="info-content-title">
+          <b>ШАНОВНІ	СТУДЕНТИ,	ВИКЛАДАЧІ,</b>
 
           ВИПУСКНИКИ ФАКУЛЬТЕТУ ТА ГОСТІ!</h2>
           
           <p>У КОЖНОГО З НАС Є ОСОБЛИВИЙ ДЕНЬ, ЯКИЙ ОБ'ЄДНУЄ НАС У СПІЛЬНОМУ СВЯТІ - ДЕНЬ ФАКУЛЬТЕТУ. ЦЕ СВЯТО ПОЗИТИВНИХ ЕМОЦІЙ, СПОГАДІВ, ПІДСУМКІВ БАГАТОРІЧНОЇ НАПОЛЕГЛИВОЇ ПРАЦІ КОЛЕКТИВУ ФАКУЛЬТЕТУ ТА СТУДЕНТСТВА, НАРИСІВ НОВИХ ПЛАНІВ ТА МРІЙ.</p>
           
-          <p>З НАГОДИ <b>СВЯТКУВАННЯ 50-РІЧЧЯ ДНЯ ФАКУЛЬТЕТУ ПРИКЛАДНОЇ МАТЕМАТИКИ ТА ІНФОРМАТИКИ ЗАПРОШУЄМО</b>
+          <p>З НАГОДИ <b>СВЯТКУВАННЯ 50-РІЧЧЯ ФАКУЛЬТЕТУ ПРИКЛАДНОЇ МАТЕМАТИКИ ТА ІНФОРМАТИКИ ЗАПРОШУЄМО</b>
           
           ВАС ВЗЯТИ УЧАСТЬ У НАШОМУ ЗАХОДІ.
           
@@ -74,7 +98,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           
           <p>ВИ МАТИМЕТЕ УНІКАЛЬНУ МОЖЛИВІСТЬ ПОЗНАЙОМИТИСЯ З ВІДОМИМИ ПРОФЕСІОНАЛАМИ У РІЗНИХ ГАЛУЗЯХ, ЯКІ ПОДІЛЯТЬСЯ СВОЇМ УСПІХОМ, ПОРАДАМИ ТА РОЗКАЖУТЬ, ЯКИЙ СТАРТ У ЇХНЬОМУ ЖИТТІ ДАВ ФАКУЛЬТЕТ.</p>
           
-          <p>ОФІЦІЙНА ЧАСТИНА ЗАХОДУ ВІДБУДЕТЬСЯ В АКТОВІЙ ЗАЛІ УНІВЕРСИТЕТУ <b>16 ТРАВНЯ О 12.00</b></p>
+          <p>ОФІЦІЙНА ЧАСТИНА ЗАХОДУ ВІДБУДЕТЬСЯ В АКТОВІЙ ЗАЛІ УНІВЕРСИТЕТУ <b>16 ТРАВНЯ О 13.00</b></p>
           
           <p>ТАКОЖ ЗАПРОШУЄМО ПРИЄДНАТИСЬ ДО НЕОФІЦІЙНОЇ ЧАСТИНИ ВЕЧОРА У <b>БУДИНКУ ВЧЕНИХ (ВУЛ. ЛИСТОПАДОВОГО ЧИНУ, 6)</b></p>
           
@@ -83,6 +107,11 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       <p>
         ДЛЯ ЦЬОГО ДНЯ ОГОЛОШУЄМО ЗБІР ДЛЯ КОШТІВ НА БАНДЕРОМОБІЛІ ДЛЯ НАШОГО ВІЙСЬКА  
       </p>
+      <div class="qrCodeWrapper">
+        <img src="./assets/qr.png" alt="QR-код з покликанням на збір." />
+        <div>ДОЛУЧИСЯ ДО ЗБОРУ НА БАНДЕРОМОБІЛЬ</div>
+      </div>
+      
       <p class="info-content-last-paragraph">
         <b>
           ЧЕКАЄМО НА ВАС!
@@ -212,12 +241,132 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               Олег Дугін – Генеральний директор Symphony Solutions
             </div>
           </li>
+          <li class="splide__slide">
+            <img src="./assets/Person7.png" alt="">
+            <div class="splide__desc">
+              Олекса Стельмах - Директор і засновник компанії Leobit
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img src="./assets/Person8.jpg" alt="">
+            <div class="splide__desc">
+              Олександр Музичук - Генеральний директор та співзасновник компанії Abto Software
+
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img src="./assets/Person9.jpg" alt="">
+            <div class="splide__desc">
+              Святослав Літинський - Доцент факультету та директор і співзасновник компанії Abto Software
+
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person10.png" alt="">
+            <div class="splide__desc">
+              Компанія Inoxoft
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person11.png" alt="">
+            <div class="splide__desc">
+              Руслан Захарченко - Генеральний директор Edvantis
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person12.jpg" alt="">
+            <div class="splide__desc">
+              Андрій Табачин - Генеральний директор та співвласник Nravo та EdPro
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person13.jpg" alt="">
+            <div class="splide__desc">
+              Антон Скрипник - Директор і співзасновник компанії KindGeek
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person14.jpg" alt="">
+            <div class="splide__desc">
+              Галина Шпорлюк - Директор в компанії Conscensia
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person15.jpg" alt="">
+            <div class="splide__desc">
+              Іван Муць та Павло Тхір - Директори і співзасновники компанії Euristiq
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person16.jpg" alt="">
+            <div class="splide__desc">
+              Михайло Катрук - Директор і співзасновник компанії Team Rainmakers
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person17.jpg" alt="">
+            <div class="splide__desc">
+              Володимир та Василь Хмілі - Директори і співзасновники компанії NERDZ LAB
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person18.jpg" alt="">
+            <div class="splide__desc">
+              Богдан Васильків, Тетяна Стойко (викладачка факультету) - Директори і співзасновники компанії Incora
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person19.png" alt="">
+            <div class="splide__desc">
+              Сергій Сидорчук - Технічний директор і співзасновник компанії Bits Orchestra
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person20.jpg" alt="">
+            <div class="splide__desc">
+              Ігор та Владислав Петровичі - Керуючі партнери компанії Noltic
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person21.jpg" alt="">
+            <div class="splide__desc">
+              Андрій Обрізан та Микола Пустовойченко - засновники компанії Leanylabs
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person22.jpg" alt="">
+            <div class="splide__desc">
+              Юрій Штибель засновник компанії FutureOne Tech
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person23.jpg" alt="">
+            <div class="splide__desc">
+              Іван Вергун директор в компанії Jappware
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person24.png" alt="">
+            <div class="splide__desc">
+              Олег Михайлович директор в компаніях Immortal Games та Dapplica, співзасновник в MetaMetaverse
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person25.png" alt="">
+            <div class="splide__desc">
+              Соломія Демків засновниця компанії Proga Tech
+            </div>
+          </li>
+          <li class="splide__slide">
+            <img width="100" src="./assets/Person26.jpg" alt="">
+            <div class="splide__desc">
+              Юрій Лучків засновник та директор компанії Tech1
+            </div>
+          </li>
         </ul>
       </div>
     </section>
   </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
