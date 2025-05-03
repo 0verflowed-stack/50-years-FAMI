@@ -135,6 +135,9 @@ html, body {
   font-size: 32px;
   text-align: center;
 }
+.text-indent {
+  text-indent: 2rem;
+}
 .blob {
   position: absolute;
   top: -50px;
