@@ -143,7 +143,7 @@ html, body {
   z-index: -1;
 }
 .gallery {
-  padding: 50px 20px;
+  padding: 10px 20px;
   width: 100%;
   margin: 0 auto;
   color: #000;
@@ -156,7 +156,7 @@ body .gallery:first-of-type {
 
 .gallery-title {
   text-align: center;
-  font-size: 42px;
+  font-size: 34px;
 }
 
 .splide {
@@ -181,7 +181,7 @@ body .gallery:first-of-type {
 }
 
 .splide__desc {
-  font-size: 24px;
+  font-size: 20px;
   margin: 5px 0 0;
 }
 
