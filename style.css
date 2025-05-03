@@ -133,6 +133,7 @@ html, body {
 }
 .info-content-title, .info-content-last-paragraph {
   font-size: 32px;
+  text-align: center;
 }
 .blob {
   position: absolute;
