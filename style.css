@@ -194,7 +194,7 @@ body .gallery:first-of-type {
     left: 16px;
   }
   .info-section {
-    padding: 16px;
+    padding: 16px 16px 46px;
   }
   .info-content {
     font-size: 16px;
