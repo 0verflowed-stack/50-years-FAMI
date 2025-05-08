@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
   splide2.mount();
 
   new Splide('#image-carousel-main', {
-    // type    : 'loop',
+    type    : 'loop',
     perPage : 5,
     gap     : '1rem',
     focus      : 2, 
