@@ -145,13 +145,11 @@ document.addEventListener('DOMContentLoaded', function () {
     lazyLoad   : 'nearby', 
     breakpoints: {
       1200: {
-        perPage : 3,
-        focus   : 'center'
+        perPage : 3
       },
       768: {
         // type    : 'loop',
         perPage : 1,
-        focus   : 0,
         autoWidth: false,
         gap     : '0.5rem',
       }
@@ -183,12 +181,10 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       1200: {
         perPage : 3,
-        focus   : 'center'
       },
       768: {
         // type    : 'loop',
         perPage : 1,
-        focus   : 0,
         autoWidth: false,
         gap     : '0.5rem',
         arrows     : true,
@@ -221,12 +217,10 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       1200: {
         perPage : 3,
-        focus   : 'center'
       },
       768: {
         // type    : 'loop',
         perPage : 1,
-        focus   : 0,
         autoWidth: false,
         gap     : '0.5rem',
         arrows     : true,
@@ -282,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // type    : 'loop',
     perPage : 5,
     gap     : '1rem',
-    focus      : 2, 
+    focus      : 0, 
     rewind  : true,
     padding: '35px',
     lazyLoad   : 'nearby', 
@@ -290,12 +284,10 @@ document.addEventListener('DOMContentLoaded', function () {
       768: {
         perPage: 1,
         gap: '0.5rem',
-        focus: 0
       },
       1200: {
         perPage: 3,
         gap: '0.5rem',
-        focus : 1,  
       }
     }
   }).mount();
@@ -305,15 +297,11 @@ document.addEventListener('DOMContentLoaded', function () {
     perPage    : 3,
     focus      : 0,
     gap        : '1rem',
-    arrows     : false,
+    arrows     : true,
     padding    : '1rem',
     autoWidth: true,
     lazyLoad   : 'nearby', 
     breakpoints: {
-      1200: {
-        perPage : 3,
-        focus   : 'center'
-      },
       768: {
         // type    : 'loop',
         perPage : 1,
