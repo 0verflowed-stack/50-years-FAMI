@@ -158,14 +158,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  let switched5 = false;
+  // let switched5 = false;
 
-  splide5.on('move', () => {
-    if (!switched5) {
-      splide5.options = { focus: 'center' };
-      switched5 = true;
-    }
-  });
+  // splide5.on('move', () => {
+  //   if (!switched5) {
+  //     splide5.options = { focus: 'center' };
+  //     switched5 = true;
+  //   }
+  // });
   
   splide5.on('mounted moved', () => syncCaptionWidths('image-carousel-personal'));
   window.addEventListener('resize', () => syncCaptionWidths('image-carousel-personal'));
@@ -196,14 +196,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  let switched1 = false;
+  // let switched1 = false;
 
-  splide1.on('move', () => {
-    if (!switched1) {
-      splide1.options = { focus: 'center' };
-      switched1 = true;
-    }
-  });
+  // splide1.on('move', () => {
+  //   if (!switched1) {
+  //     splide1.options = { focus: 'center' };
+  //     switched1 = true;
+  //   }
+  // });
   syncCaptionWidths('image-carousel-olympics')
   splide1.on('mounted moved', () => syncCaptionWidths('image-carousel-olympics'));
   window.addEventListener('resize', () => syncCaptionWidths('image-carousel-olympics'));
@@ -235,14 +235,14 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   
-  let switched4 = false;
+  // let switched4 = false;
 
-  splide4.on('move', () => {
-    if (!switched4) {
-      splide4.options = { focus: 'center' };
-      switched4 = true;
-    }
-  });
+  // splide4.on('move', () => {
+  //   if (!switched4) {
+  //     splide4.options = { focus: 'center' };
+  //     switched4 = true;
+  //   }
+  // });
 
   splide4.mount();
 
@@ -265,14 +265,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  let switched2 = false;
+  // let switched2 = false;
 
-  splide2.on('move', () => {
-    if (!switched2) {
-      splide2.options = { focus: 'center' };
-      switched2 = true;
-    }
-  });
+  // splide2.on('move', () => {
+  //   if (!switched2) {
+  //     splide2.options = { focus: 'center' };
+  //     switched2 = true;
+  //   }
+  // });
   syncCaptionWidths('image-carousel-famous-persons')
   splide2.on('mounted moved', () => syncCaptionWidths('image-carousel-famous-persons'));
   window.addEventListener('resize', () => syncCaptionWidths('image-carousel-famous-persons'));
