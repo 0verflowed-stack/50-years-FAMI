@@ -194,6 +194,31 @@ body .gallery:first-of-type {
   margin: 5px 0 0;
 }
 
+@media (max-width: 768px) {
+  .splide__slide img {
+    max-height: 450px;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 768px) {
+  /* 1. Top-align everything in each slide */
+  section.splide:not(#image-carousel-main) .splide__slide {
+    display: flex;            /* already true, but just to be explicit */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;  /* captions will sit under the image, flush left */
+  }
+
+  /* 2. Give only the image a fixed height; width auto preserves aspect ratio */
+  section.splide:not(#image-carousel-main) .splide__slide img {
+    height: 450px;       /* ← your desired static height */
+    width: auto;         /* ← infer width from aspect ratio */
+    object-fit: cover;   /* ← fill the box, cropping if necessary */
+    object-position: center;
+    display: block;      /* remove inline-image whitespace */
+  }
+}
 @media (max-width: 820px) {
   .info-section .qrCodeWrapper {
     height: 300px;
