@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
       'Lab3': '290 / 151',
       'Lab4': '479 / 360',
       'Lab5': '1385 / 924',
-      'Lab6': '3 / 4',
+      'Lab6': '24 / 25',
       'Lab7': '4 / 3',
-      'Lab8': '3 / 4',
+      'Lab8': '1080 / 1163',
       'Lab9': '1645 / 1234',
       'Person1': '1021 / 939',
       'Person10': '823 / 280',
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'ящук': '977 / 1483',
   };
 
-  document.querySelectorAll('img').forEach(img => {
+  document.querySelectorAll('.gallery img').forEach(img => {
     // skip if already has an inline aspect-ratio
     if (img.style.aspectRatio) return;
 
@@ -105,9 +105,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const ratio = aspectMap[key] || (byClass && aspectMap[byClass]);
     if (ratio) {
       img.style.aspectRatio = ratio;
+      img.setAttribute('height', 450);
     }
   });
 
+
+  const IMG_HEIGHT = 450;
 
   function syncCaptionWidths(id) {
     document
@@ -116,16 +119,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const img  = slide.querySelector('img');
         const desc = slide.querySelector('.splide__desc');
         if (!img || !desc) return;
-  
-        const applyWidth = () => {
-          desc.style.maxWidth = img.clientWidth + 'px';
-        };
-  
-        if (img.clientWidth > 0) {
-          applyWidth();
-        } else {
-          img.addEventListener('load', applyWidth, { once: true });
-        }
+
+        // figure out which key to look up in aspectMap
+        const src    = img.dataset.splideLazy || img.getAttribute('src') || '';
+        const file   = src.split('/').pop() || '';
+        const key    = file.replace(/\.\w+$/, '');         // e.g. "Person1"
+        const ratio  = (aspectMap[key] || '').split('/').map(s => Number(s.trim()));
+        if (ratio.length !== 2) return;
+
+        const [W, R] = ratio;
+        const pixelWidth = Math.round( IMG_HEIGHT * (W / R) );
+
+        desc.style.maxWidth = pixelWidth + 'px';
       });
   }
 
@@ -200,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
       switched1 = true;
     }
   });
-
+  syncCaptionWidths('image-carousel-olympics')
   splide1.on('mounted moved', () => syncCaptionWidths('image-carousel-olympics'));
   window.addEventListener('resize', () => syncCaptionWidths('image-carousel-olympics'));
   splide1.mount();
@@ -269,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
       switched2 = true;
     }
   });
-
+  syncCaptionWidths('image-carousel-famous-persons')
   splide2.on('mounted moved', () => syncCaptionWidths('image-carousel-famous-persons'));
   window.addEventListener('resize', () => syncCaptionWidths('image-carousel-famous-persons'));
   splide2.mount();
@@ -320,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   } )
-  
+  syncCaptionWidths('image-carousel-startups')
   splide3.on('mounted moved', () => syncCaptionWidths('image-carousel-startups'));
   window.addEventListener('resize', () => syncCaptionWidths('image-carousel-startups'));
   splide3.mount();  
