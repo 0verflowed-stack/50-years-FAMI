@@ -8,15 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!img || !desc) return;
   
         const applyWidth = () => {
-          // now clientWidth should be > 0
           desc.style.maxWidth = img.clientWidth + 'px';
         };
   
         if (img.clientWidth > 0) {
-          // already laid out
           applyWidth();
         } else {
-          // wait until it’s loaded and laid out
           img.addEventListener('load', applyWidth, { once: true });
         }
       });
@@ -26,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     perPage    : 3,
     focus      : 0,
     gap        : '1rem',
-    arrows     : false,
+    arrows     : true,
     padding    : '1rem',
     autoWidth: true,
     breakpoints: {
@@ -63,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     perPage    : 3,
     focus      : 0,
     gap        : '1rem',
-    arrows     : false,
+    arrows     : true,
     padding    : '1rem',
     autoWidth: true,
     breakpoints: {
@@ -162,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
       768: {
         type    : 'loop',
         perPage : 1,
-        focus   : 0,
+        focus   : 1,
         autoWidth: false,
         gap     : '0.5rem',
         arrows     : true,
@@ -179,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
     perPage    : 3,
     focus      : 0,
     gap        : '1rem',
-    arrows     : false,
+    arrows     : true,
     padding    : '1rem',
     autoWidth: true,
     breakpoints: {

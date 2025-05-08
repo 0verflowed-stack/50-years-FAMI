@@ -202,21 +202,19 @@ body .gallery:first-of-type {
 }
 
 @media (min-width: 768px) {
-  /* 1. Top-align everything in each slide */
   section.splide:not(#image-carousel-main) .splide__slide {
-    display: flex;            /* already true, but just to be explicit */
+    display: flex; 
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;  /* captions will sit under the image, flush left */
+    align-items: flex-start; 
   }
 
-  /* 2. Give only the image a fixed height; width auto preserves aspect ratio */
   section.splide:not(#image-carousel-main) .splide__slide img {
-    height: 450px;       /* ← your desired static height */
-    width: auto;         /* ← infer width from aspect ratio */
-    object-fit: cover;   /* ← fill the box, cropping if necessary */
+    height: 450px; 
+    width: auto;
+    object-fit: cover;
     object-position: center;
-    display: block;      /* remove inline-image whitespace */
+    display: block;
   }
 }
 @media (max-width: 820px) {
