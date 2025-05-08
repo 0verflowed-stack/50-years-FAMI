@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // type    : 'loop',
     perPage : 5,
     gap     : '1rem',
-    focus      : 0, 
+    focus      : 2, 
     rewind  : true,
     padding: '35px',
     lazyLoad   : 'nearby', 
@@ -284,10 +284,12 @@ document.addEventListener('DOMContentLoaded', function () {
       768: {
         perPage: 1,
         gap: '0.5rem',
+        focus: 0
       },
       1200: {
         perPage: 3,
         gap: '0.5rem',
+        focus: 1
       }
     }
   }).mount();
