@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const splide5 = new Splide( '#image-carousel-personal', {
-    type       : 'loop',
+    // type       : 'loop',
     perPage    : 3,
     focus      : 0,
     gap        : '1rem',
@@ -149,12 +149,11 @@ document.addEventListener('DOMContentLoaded', function () {
         focus   : 'center'
       },
       768: {
-        type    : 'loop',
+        // type    : 'loop',
         perPage : 1,
         focus   : 0,
         autoWidth: false,
         gap     : '0.5rem',
-        arrows     : true,
       }
     }
   })
@@ -173,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
   splide5.mount();  
 
   const splide1 = new Splide( '#image-carousel-olympics', {
-    type       : 'loop',
+    // type       : 'loop',
     perPage    : 3,
     focus      : 0,
     gap        : '1rem',
@@ -187,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
         focus   : 'center'
       },
       768: {
-        type    : 'loop',
+        // type    : 'loop',
         perPage : 1,
         focus   : 0,
         autoWidth: false,
@@ -211,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
   splide1.mount();
 
   const splide4 = new Splide('#image-carousel-lab', {
-    type       : 'loop',
+    // type       : 'loop',
     perPage    : 3,
     focus      : 0,
     gap        : '1rem',
@@ -225,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
         focus   : 'center'
       },
       768: {
-        type    : 'loop',
+        // type    : 'loop',
         perPage : 1,
         focus   : 0,
         autoWidth: false,
@@ -248,11 +247,11 @@ document.addEventListener('DOMContentLoaded', function () {
   splide4.mount();
 
   const splide2 = new Splide('#image-carousel-famous-persons', {
-    type    : 'loop',
+    // type    : 'loop',
     perPage : 3,
     gap     : '1rem',
     focus      : 0, 
-    rewind  : true,
+    // rewind  : true,
     padding: '35px',
     autoWidth: true,
     lazyLoad   : 'nearby', 
@@ -280,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function () {
   splide2.mount();
 
   new Splide('#image-carousel-main', {
-    type    : 'loop',
+    // type    : 'loop',
     perPage : 5,
     gap     : '1rem',
     focus      : 2, 
@@ -302,9 +301,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }).mount();
 
   const splide3 = new Splide( '#image-carousel-startups', {
-    type       : 'loop',
+    // type       : 'loop',
     perPage    : 3,
-    focus      : 'center',
+    focus      : 0,
     gap        : '1rem',
     arrows     : false,
     padding    : '1rem',
@@ -316,9 +315,9 @@ document.addEventListener('DOMContentLoaded', function () {
         focus   : 'center'
       },
       768: {
-        type    : 'loop',
+        // type    : 'loop',
         perPage : 1,
-        focus   : 1,
+        focus   : 0,
         autoWidth: false,
         gap     : '0.5rem',
         arrows     : true,

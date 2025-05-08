@@ -30,9 +30,6 @@
   <link href="
   https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   " rel="stylesheet">  
-  <link href="
-  https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
-  " rel="stylesheet">
 </head>
 <body>
   <section class="hero">
@@ -80,16 +77,13 @@
     </div>
   </section>
   <section class="info-section">
-    <!-- <div class="worklet-canvas"></div> -->
     <svg class="blob" viewBox="0 0 200 500">
       <defs>
-        <!-- Define a Gaussian Blur filter -->
         <filter id="blur-filter" x="-20%" y="-20%" width="140%" height="140%">
           <feGaussianBlur in="SourceGraphic" stdDeviation="20" />
         </filter>
       </defs>
   
-      <!-- Blob path with the blur filter applied -->
       <path
         filter="url(#blur-filter)"
         fill="#165ba0"
@@ -564,6 +558,12 @@
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">
+            <img data-splide-lazy="./assets/Startup3_3.jpg" alt="">
+            <div class="splide__desc">
+              Андрій Кусий - співзасновник стартапу LetsData. LetsData — це АІ-рішення, яке прогнозує комунікаційні ризики й можливості, та допомагає організаціям протистояти загрозливим інформаційним кампаніям.
+            </div>
+          </li>
+          <li class="splide__slide">
             <img data-splide-lazy="./assets/Startup1.jpg" alt="">
             <div class="splide__desc">
               Ростислав Ханас - співзасновник та технічний директор Spacebring (formerly andcards). Був інженером в Samsung Electronics            
@@ -573,12 +573,6 @@
             <img data-splide-lazy="./assets/Startup2.jpg" alt="">
             <div class="splide__desc">
               Олег Заремба - співзасновник та технічний директор стартапів AxDraft та AiSDR. Двічі запрошені до Y Combinator: AXDRAFT (W2019) та AISDR (S2023).    
-            </div>
-          </li>
-          <li class="splide__slide">
-            <img data-splide-lazy="./assets/Startup3_3.jpg" alt="">
-            <div class="splide__desc">
-              Андрій Кусий - співзасновник стартапу LetsData. LetsData — це АІ-рішення, яке прогнозує комунікаційні ризики й можливості, та допомагає організаціям протистояти загрозливим інформаційним кампаніям.
             </div>
           </li>
         </ul>
