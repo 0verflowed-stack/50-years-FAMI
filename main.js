@@ -88,6 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'цегелик': '977 / 1483',
       'шинкаренко': '1007 / 1562',
       'ящук': '977 / 1483',
+      'Смичок': '1035 / 1562',
+      'Корольчук': '1234 / 1645'
   };
 
   document.querySelectorAll('.gallery img').forEach(img => {
