@@ -194,7 +194,6 @@ document.addEventListener('DOMContentLoaded', function () {
         perPage : 3,
       },
       768: {
-        // type    : 'loop',
         perPage : 1,
         autoWidth: false,
         gap     : '0.5rem',
@@ -273,7 +272,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.gallery img').forEach(img => {
     img.addEventListener('click', () => {
-      // if (window.innerWidth <= 768) return;
       const fullSrc = img.dataset.full || img.src;
       document.getElementById('modalImg').src = fullSrc;
       const prev = document.activeElement; 
