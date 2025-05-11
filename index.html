@@ -30,8 +30,21 @@
   <link href="
   https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   " rel="stylesheet">  
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 </head>
 <body>
+  <div class="modal micromodal-slide" id="image-modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <header class="modal__header">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content">
+          <img id="modalImg" src="" alt="Full-size image" style="max-width:100%; height:auto;">
+        </main>
+      </div>
+    </div>
+  </div>
   <section class="hero">
     <img class="faculty-logo" src="./assets/logo-faculty-ami.png" alt="Logo" />
     <div class="hero-background">
@@ -236,49 +249,49 @@
             </div>
           </li>
           <li class="splide__slide">
-            <img data-splide-lazy="./assets/КДАІС_.jpg" alt="">
+            <img data-full="./assets/КДАІС.avif" data-splide-lazy="./assets/КДАІС_.jpg" alt="">
             <div class="splide__desc">
               КДАІС - кафедра дискретного аналізу та інтелектуальних систем
             </div>
           </li>
           <li class="splide__slide">
-            <img data-splide-lazy="./assets/КІС_.jpg" alt="">
+            <img data-full="./assets/КІС.avif" data-splide-lazy="./assets/КІС_.jpg" alt="">
             <div class="splide__desc">
               КІС - кафедра інформаційних систем
             </div>
           </li>
           <li class="splide__slide">
-            <img data-splide-lazy="./assets/КММСЕП_.jpg" alt="">
+            <img data-full="./assets/КММСЕП.avif" data-splide-lazy="./assets/КММСЕП_.jpg" alt="">
             <div class="splide__desc">
               КММСЕП - кафедра математичного моделювання соціально-економічних процесів
             </div>
           </li>
           <li class="splide__slide">
-            <img data-splide-lazy="./assets/КОМ_.jpg" alt="">
+            <img data-full="./assets/КОМ.avif" data-splide-lazy="./assets/КОМ_.jpg" alt="">
             <div class="splide__desc">
               КОМ - кафедра обчислювальної математики
             </div>
           </li>
           <li class="splide__slide">
-            <img data-splide-lazy="./assets/КП_.jpg" alt="">
+            <img data-full="./assets/КП.avif" data-splide-lazy="./assets/КП_.jpg" alt="">
             <div class="splide__desc">
               КП - кафедра програмування
             </div>
           </li>
           <li class="splide__slide">
-            <img data-splide-lazy="./assets/КПМ_.jpg" alt="">
+            <img data-full="./assets/КПМ.avif" data-splide-lazy="./assets/КПМ_.jpg" alt="">
             <div class="splide__desc">
               КПМ - кафедра прикладної математики
             </div>
           </li>
           <li class="splide__slide">
-            <img data-splide-lazy="./assets/КТОП_.jpg" alt="">
+            <img data-full="./assets/КТОП.avif" data-splide-lazy="./assets/КТОП_.jpg" alt="">
             <div class="splide__desc">
               КТОП - кафедра теорії оптимальних процесів
             </div>
           </li>
           <li class="splide__slide">
-            <img data-splide-lazy="./assets/факультет_50річчя_.jpg" alt="">
+            <img data-full="./assets/факультет_50річчя.avif" data-splide-lazy="./assets/факультет_50річчя_.jpg" alt="">
             <div class="splide__desc">
               Групове фото всіх викладачів
             </div>

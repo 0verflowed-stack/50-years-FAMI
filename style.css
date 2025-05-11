@@ -218,7 +218,11 @@ body .gallery:first-of-type {
     object-position: center;
     display: block !important;
   }
+  .gallery img:hover {
+    cursor: pointer;
+  }
 }
+
 @media (max-width: 820px) {
   .info-section .qrCodeWrapper {
     height: 300px;
@@ -242,4 +246,102 @@ body .gallery:first-of-type {
   .heroContentWrapper {
     background-size: 50vw;
   }
+}
+
+.modal {
+  display: none;
+  visibility: hidden;
+}
+
+.modal.is-open {
+  z-index: 5;
+  position: absolute;
+  display: block;
+  visibility: visible;
+}
+
+.modal {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+               helvetica neue, helvetica, ubuntu, roboto, noto,
+               segoe ui, arial, sans-serif;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  background-color: #d3d3d3;
+  padding: 30px;
+  max-width: calc(100vw - 10px);
+  max-height: 100vh;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: #00449e;
+}
+
+.modal__close {
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+}
+
+.modal__header .modal__close:before {
+  content: "\2715";
+}
+
+.modal__content {
+  line-height: 1.5;
+  color: rgba(0,0,0,0.8);
+}
+
+.modal__btn {
+  font-size: .875rem;
+  padding: .5rem 1rem;
+  background-color: #ff0000;
+  color: rgba(0,0,0,0.8);
+  border-radius: .25rem;
+  border: none;
+  cursor: pointer;
+  will-change: transform;
+  transition: transform .25s ease-out;
+}
+
+.modal__btn:focus,
+.modal__btn:hover {
+  transform: scale(1.05);
+}
+
+.modal__btn-primary {
+  background-color: #00449e;
+  color: #fff;
+}
+#modalImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+body.modal-open {
+  overflow: hidden;
+  position: relative;
 }

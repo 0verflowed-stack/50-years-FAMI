@@ -95,15 +95,12 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   document.querySelectorAll('.gallery img').forEach(img => {
-    // skip if already has an inline aspect-ratio
     if (img.style.aspectRatio) return;
 
-    // try data-splide-lazy first, then src
     const src = img.dataset.splideLazy || img.getAttribute('src') || '';
     const file = src.split('/').pop() || '';
-    const key  = file.replace(/\.\w+$/, '');  // “0.jpg” → “0”
+    const key  = file.replace(/\.\w+$/, '');
 
-    // fallback: if it has a class that matches a map key
     const byClass = Array.from(img.classList).find(c => aspectMap[c]);
 
     const ratio = aspectMap[key] || (byClass && aspectMap[byClass]);
@@ -124,10 +121,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const desc = slide.querySelector('.splide__desc');
         if (!img || !desc) return;
 
-        // figure out which key to look up in aspectMap
         const src    = img.dataset.splideLazy || img.getAttribute('src') || '';
         const file   = src.split('/').pop() || '';
-        const key    = file.replace(/\.\w+$/, '');         // e.g. "Person1"
+        const key    = file.replace(/\.\w+$/, '');
         const ratio  = (aspectMap[key] || '').split('/').map(s => Number(s.trim()));
         if (ratio.length !== 2) return;
 
@@ -139,20 +135,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const splide5 = new Splide( '#image-carousel-personal', {
-    // type       : 'loop',
-    perPage    : 3,
     focus      : 0,
     gap        : '1rem',
     arrows     : true,
     padding    : '1rem',
     autoWidth: true,
-    lazyLoad   : 'nearby', 
+    lazyLoad   : 'sequential', 
     breakpoints: {
       1200: {
         perPage : 3
       },
       768: {
-        // type    : 'loop',
         perPage : 1,
         autoWidth: false,
         gap     : '0.5rem',
@@ -160,34 +153,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  // let switched5 = false;
-
-  // splide5.on('move', () => {
-  //   if (!switched5) {
-  //     splide5.options = { focus: 'center' };
-  //     switched5 = true;
-  //   }
-  // });
-  
   splide5.on('mounted moved', () => syncCaptionWidths('image-carousel-personal'));
   window.addEventListener('resize', () => syncCaptionWidths('image-carousel-personal'));
   splide5.mount();  
 
   const splide1 = new Splide( '#image-carousel-olympics', {
-    // type       : 'loop',
-    perPage    : 3,
     focus      : 0,
     gap        : '1rem',
     arrows     : true,
     padding    : '1rem',
     autoWidth: true,
-    lazyLoad   : 'nearby', 
+    lazyLoad   : 'sequential', 
     breakpoints: {
       1200: {
         perPage : 3,
       },
       768: {
-        // type    : 'loop',
         perPage : 1,
         autoWidth: false,
         gap     : '0.5rem',
@@ -196,28 +177,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  // let switched1 = false;
-
-  // splide1.on('move', () => {
-  //   if (!switched1) {
-  //     splide1.options = { focus: 'center' };
-  //     switched1 = true;
-  //   }
-  // });
   syncCaptionWidths('image-carousel-olympics')
   splide1.on('mounted moved', () => syncCaptionWidths('image-carousel-olympics'));
   window.addEventListener('resize', () => syncCaptionWidths('image-carousel-olympics'));
   splide1.mount();
 
   const splide4 = new Splide('#image-carousel-lab', {
-    // type       : 'loop',
-    perPage    : 3,
     focus      : 0,
     gap        : '1rem',
     arrows     : true,
     padding    : '1rem',
     autoWidth: true,
-    lazyLoad   : 'nearby', 
+    lazyLoad   : 'sequential', 
     breakpoints: {
       1200: {
         perPage : 3,
@@ -232,45 +203,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  
-  // let switched4 = false;
-
-  // splide4.on('move', () => {
-  //   if (!switched4) {
-  //     splide4.options = { focus: 'center' };
-  //     switched4 = true;
-  //   }
-  // });
-
   splide4.mount();
 
   const splide2 = new Splide('#image-carousel-famous-persons', {
-    // type    : 'loop',
-    perPage : 3,
     gap     : '1rem',
     focus      : 0, 
-    // rewind  : true,
     padding: '35px',
     autoWidth: true,
-    lazyLoad   : 'nearby', 
+    lazyLoad   : 'sequential', 
     breakpoints: {
       768: {
         perPage: 1,
         gap: '0.5rem',
-        // width: '100%',
         autoWidth: false
       }
     }
   })
 
-  // let switched2 = false;
-
-  // splide2.on('move', () => {
-  //   if (!switched2) {
-  //     splide2.options = { focus: 'center' };
-  //     switched2 = true;
-  //   }
-  // });
   syncCaptionWidths('image-carousel-famous-persons')
   splide2.on('mounted moved', () => syncCaptionWidths('image-carousel-famous-persons'));
   window.addEventListener('resize', () => syncCaptionWidths('image-carousel-famous-persons'));
@@ -283,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
     focus      : 2, 
     rewind  : true,
     padding: '35px',
-    lazyLoad   : 'nearby', 
+    lazyLoad   : 'sequential', 
     breakpoints: {
       768: {
         perPage: 1,
@@ -299,17 +248,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }).mount();
 
   const splide3 = new Splide( '#image-carousel-startups', {
-    // type       : 'loop',
-    perPage    : 3,
     focus      : 0,
     gap        : '1rem',
     arrows     : true,
     padding    : '1rem',
     autoWidth: true,
-    lazyLoad   : 'nearby', 
+    lazyLoad   : 'sequential', 
     breakpoints: {
       768: {
-        // type    : 'loop',
         perPage : 1,
         focus   : 0,
         autoWidth: false,
@@ -323,8 +269,30 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', () => syncCaptionWidths('image-carousel-startups'));
   splide3.mount();  
 
-  
+  MicroModal.init();
 
+  document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+      // if (window.innerWidth <= 768) return;
+      const fullSrc = img.dataset.full || img.src;
+      document.getElementById('modalImg').src = fullSrc;
+      const prev = document.activeElement; 
+      prev?.blur(); 
+      MicroModal.show('image-modal', {
+        disableScroll: false,
+        onShow: () => {
+          const container = document.querySelector('.modal__container');
+          container.setAttribute('tabindex', '-1');
+          container.focus();
+          document.body.classList.add('modal-open');
+        },
+        onClose: () => {
+          document.body.classList.remove('modal-open');
+          document.getElementById('modalImg').src = '';
+        },
+      });
+    });
+  });
     
 });
 
