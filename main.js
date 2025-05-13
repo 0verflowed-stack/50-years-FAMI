@@ -91,7 +91,11 @@ document.addEventListener('DOMContentLoaded', function () {
       'шинкаренко': '1007 / 1562',
       'ящук': '977 / 1483',
       'Смичок': '1035 / 1562',
-      'Корольчук': '1234 / 1645'
+      'Корольчук': '1234 / 1645',
+      'Pavliv': '1 / 1',
+      'Stelmah': '533 / 800',
+      'Khapko_Onyskiv': '5656 / 3725',
+      'Konovalov': '4 / 3'
   };
 
   document.querySelectorAll('.gallery img').forEach(img => {
