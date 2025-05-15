@@ -108,12 +108,27 @@ html, body {
   font-size: 20px;
   position: relative;
 }
-
+.pdfLink {
+  display: flex;
+  justify-content: center;
+}
+.pdfLink a:link {
+  color: #fff;
+}
+.pdfLink a:visited  {
+  color: rgb(139 27 191);
+}
+.pdfLink a:hover  {
+  color: gray;
+}
+.pdfLink a:active   {
+  color: gray;
+}
 .info-section h3 {
   margin-bottom: 20px;
 }
 .info-section p {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .info-section .qrCodeWrapper {
   display: flex;

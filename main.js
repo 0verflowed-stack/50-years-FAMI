@@ -95,7 +95,10 @@ document.addEventListener('DOMContentLoaded', function () {
       'Pavliv': '1 / 1',
       'Stelmah': '533 / 800',
       'Khapko_Onyskiv': '5656 / 3725',
-      'Konovalov': '4 / 3'
+      'Konovalov': '4 / 3',
+      '1747218861050': '800 / 533',
+      '1747218861069': '800 / 533',
+      'Vykhopen': '400 / 533',
   };
 
   document.querySelectorAll('.gallery img').forEach(img => {
