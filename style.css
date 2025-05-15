@@ -174,9 +174,6 @@ html, body {
   background-color: #242625;
   color: #fff
 }
-body .gallery:first-of-type {
-  padding-top: 500px;
-}
 
 .gallery-title {
   text-align: center;
