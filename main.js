@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'Person2': '389 / 388',
       'Person20': '603 / 305',
       'Person21': '43 / 21',
+      'Person21_1': '1 / 1',
       'Person22': '1 / 1',
       'Person23': '323 / 324',
       'Person24': '1 / 1',
